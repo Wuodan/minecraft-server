@@ -27,4 +27,9 @@ services:
     volumes:
       - ./data:/data                               # Bind mount for real files on disk
       - ./plugins.txt:/extras/plugins.txt:ro       # list of plugins to install
+      - ./scripts:/scripts
+      - ./backups:/backups
+      # mount custom command config into the plugin folder
+      - ./plugin-config/MyCommand/commands.yml:/data/plugins/MyCommand/commands/commands.yml
+      - ./plugin-config/MyCommand/scripts/backup.sh:/data/plugins/MyCommand/scripts/backup.sh
     restart: unless-stopped
