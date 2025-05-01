@@ -1,0 +1,30 @@
+name: "minecraft-server"
+services:
+  minecraft-server:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-paper
+    ports:
+      - "25565:25565"  # Minecraft server port
+      - "8123:8123"    # Dynmap's default web port
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "1.21.4"
+      MEMORY: "2G"
+      # SEED
+      # from https://beebom.com/best-minecraft-seeds/ -> 2. Three Villages and a Cherry Grove
+      # Spawn at village
+      SEED: "5348024562502568"
+      SPAWN: "-34,122,-26"
+      # list of plugins to install
+      PLUGINS_FILE: /extras/plugins.txt
+      # Admin users
+      OPS: |
+        DeKuen
+      # RCON for backup script
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "change_me"
+    volumes:
+      - ./data:/data                               # Bind mount for real files on disk
+      - ./plugins.txt:/extras/plugins.txt:ro       # list of plugins to install
+    restart: unless-stopped
