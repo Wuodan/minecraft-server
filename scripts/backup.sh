@@ -2,9 +2,27 @@
 
 set -e
 
-
+# Config
 SERVICE_NAME="minecraft-server"
-SCRIPT_PATH="/data/plugins/MyCommand/scripts/backup.sh"
+BACKUP_DIR="./backups"
+SOURCE_DIR="./data"
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+BACKUP_NAME="$SERVICE_NAME-backup-$TIMESTAMP.tar.gz"
+RCON_CMD="docker compose exec $SERVICE_NAME rcon-cli"
 
-echo "[*] Starting host-triggered backup via $SERVICE_NAME..."
-MSYS_NO_PATHCONV=1 docker-compose exec "$SERVICE_NAME" "$SCRIPT_PATH"
+# Step 1: Flush world to disk and disable saves
+echo "[*] Flushing world and disabling saving..."
+$RCON_CMD save-all flush
+sleep 2
+$RCON_CMD save-off
+
+# Step 2: Create backup
+echo "[*] Backing up data..."
+mkdir -p "$BACKUP_DIR"
+tar -czf "$BACKUP_DIR/$BACKUP_NAME" -C "$SOURCE_DIR" .
+
+# Step 3: Re-enable saving
+echo "[*] Re-enabling saving..."
+$RCON_CMD save-on
+
+echo "[✓] Backup complete: $BACKUP_DIR/$BACKUP_NAME"

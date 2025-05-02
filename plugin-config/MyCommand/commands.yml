@@ -1,7 +1,0 @@
-backup_trigger:
-  command: /backup
-  type: RUN_COMMAND
-  runcmd:
-    - bash -c "/plugins/MyCommand/scripts/backup.sh"
-  permission-required: true
-  permission-node: backup.trigger

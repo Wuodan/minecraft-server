@@ -1,2 +1,1 @@
 https://edge.forgecdn.net/files/6090/792/Dynmap-3.7-beta-8-spigot.jar
-https://dev.bukkit.org/projects/mycommand/files/6217154/download

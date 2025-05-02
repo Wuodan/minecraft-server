@@ -1,2 +1,6 @@
 /backups/
 /data/
+
+# IntelliJ
+/.idea/
+/*.iml
