@@ -25,12 +25,12 @@ services:
       ENABLE_RCON: "true"
       RCON_PASSWORD: "change_me"
       # resource pack for custom sounds
-      RESOURCE_PACK: "https://raw.githubusercontent.com/Wuodan/humorous-mc-plugin/custom_sound/fartpack.zip"
+      RESOURCE_PACK: "https://github.com/Wuodan/humorous-mc-plugin/releases/download/1.10-alpha-9/fartpack.zip"
       RESOURCE_PACK_ID: "001c1a9e-5b85-4e0b-a141-9f44a7d945d7"
       RESOURCE_PACK_PROMPT: '{"text":"Do you want to install custom fart sounds?"}'
-      RESOURCE_PACK_SHA1: "9e9ee1c29f7f3e905fc239c9f2ae9ab8359d72c8"
+      RESOURCE_PACK_SHA1: "259454291ebeaee6720c3274dc223980523de3b5"
     volumes:
       - ./data:/data                               # Bind mount for real files on disk
       - ./plugins.txt:/extras/plugins.txt:ro       # list of plugins to install
-      - ./scripts:/scripts
+#      - ./SneakFart-config.yml:/data/plugins/SneakFart/config.yml:ro
     restart: unless-stopped
