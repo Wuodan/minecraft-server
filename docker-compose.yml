@@ -27,15 +27,12 @@ services:
       ENABLE_RCON: "true"
       RCON_PASSWORD: "change_me"
       # resource pack for custom sounds
-      RESOURCE_PACK: "https://github.com/Wuodan/humorous-mc-plugin/releases/download/1.10-alpha-4/fartpack.zip"
+      RESOURCE_PACK: "https://github.com/Wuodan/humorous-mc-plugin/releases/download/1.10-alpha-5/fartpack.zip"
       RESOURCE_PACK_ID: "001c1a9e-5b85-4e0b-a141-9f44a7d945d7"
       RESOURCE_PACK_PROMPT: '{"text":"Do you want to install custom fart sounds?"}'
-      RESOURCE_PACK_SHA1: "a5d9c00b48d1f2a8c47d226c8caa5b7e6d26f948"
-      # use this together with the patch_definitions volume as alternative to overwriting SneakFart config.yml
-      # PATCH_DEFINITIONS: /data/patch_definitions
+      RESOURCE_PACK_SHA1: "5730a6062537c7a0dc7644710e7844b5278cffe7"
     volumes:
       - ./data:/data                               # Bind mount for real files on disk
       - ./plugins.txt:/extras/plugins.txt:ro       # list of plugins to install
       - ./SneakFart-config.yml:/data/plugins/SneakFart/config.yml:ro
-#      - ./patch_definitions:/data/patch_definitions:ro
     restart: unless-stopped
