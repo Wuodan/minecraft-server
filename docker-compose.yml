@@ -6,7 +6,9 @@ services:
     ports:
       - "25565:25565"  # Minecraft server port
       - "8123:8123"    # Dynmap's default web port
+      - "5005:5005"    # Java debug port
     environment:
+      JAVA_TOOL_OPTIONS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
       EULA: "TRUE"
       TYPE: "PAPER"
       VERSION: "1.21.4"
