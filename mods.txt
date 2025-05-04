@@ -1,0 +1,23 @@
+https://modrinth.com/mod/adventofascension	Advent Of Ascension [3.7.1]	https://cdn.modrinth.com/data/9qn2AQBc/versions/ADsBtG85/AoA3-1.20.1-3.7.1-all.jar
+https://www.curseforge.com/projects/223794	Applied Energistics 2 [15.3.4]	https://cdn.modrinth.com/data/XxWD5pD3/versions/Ap6Grcvz/appliedenergistics2-forge-15.3.4.jar
+https://www.curseforge.com/projects/419699	Architectury API [9.2.14]	https://cdn.modrinth.com/data/lhGA9TYQ/versions/1MKTLiiG/architectury-9.2.14-forge.jar
+https://modrinth.com/mod/jJfV67b1	Citadel [2.6.1]	https://cdn.modrinth.com/data/jJfV67b1/versions/a7H8TGhJ/citadel-2.6.1-1.20.1.jar
+https://www.curseforge.com/projects/348521	Cloth Config v10 API [11.1.136]	https://cdn.modrinth.com/data/9s6osm5g/versions/t8TXrZvZ/cloth-config-11.1.136-forge.jar
+https://www.curseforge.com/projects/276951	Comforts [6.4.0+1.20.1]	https://cdn.modrinth.com/data/SaCpeal4/versions/gBDsc134/comforts-forge-6.4.0%2B1.20.1.jar
+https://www.curseforge.com/projects/457570	Configured [2.2.3]
+https://www.curseforge.com/projects/324973	Dungeon Crawl [2.3.15]
+https://www.curseforge.com/projects/480715	Dungeons Enhanced [5.4.0]
+https://www.curseforge.com/projects/509041	Epic Knights Mod [9.23]
+https://www.curseforge.com/projects/404465	FTB Library [2001.2.9]
+https://www.curseforge.com/projects/386134	FTB Ultimine [2001.1.5]
+https://www.curseforge.com/projects/398521	Farmer's Delight [1.20.1-1.2.7]
+https://www.curseforge.com/projects/388172	GeckoLib 4 [4.7.1.2]
+https://www.curseforge.com/projects/360203	Guard Villagers [1.20.1-1.6.10]
+https://modrinth.com/mod/LVnvHVBp	Ice and Fire [2.1.13-1.20.1]
+https://www.curseforge.com/projects/238222	Just Enough Items [15.20.0.106]
+https://www.curseforge.com/projects/74924	Mantle [1.11.44]
+https://www.curseforge.com/projects/841262	Ocean's Delight [1.0.2-1.20]
+https://www.curseforge.com/projects/378802	Structure Gel API [2.16.2]
+https://www.curseforge.com/projects/74072	Tinkers' Construct [3.9.2.37]
+https://www.curseforge.com/projects/709416	Tinkers' Levelling Addon [1.4.2]
+https://www.curseforge.com/projects/233029	Vampirism [1.10.13]

@@ -2,35 +2,27 @@ name: "minecraft-server"
 services:
   minecraft-server:
     image: itzg/minecraft-server:latest
-    container_name: minecraft-paper
+    container_name: minecraft-server
     ports:
       - "25565:25565"  # Minecraft server port
-      - "8123:8123"    # Dynmap's default web port
     environment:
       EULA: "TRUE"
-      TYPE: "PAPER"
-      VERSION: "1.21.4"
-      MEMORY: "2G"
+      TYPE: "FORGE"
+      VERSION: "1.20.1"
+      MEMORY: "4G"
       # SEED
       # from https://beebom.com/best-minecraft-seeds/ -> 2. Three Villages and a Cherry Grove
       # Spawn at village
       SEED: "5348024562502568"
       SPAWN: "-34,122,-26"
-      # list of plugins to install
-      PLUGINS_FILE: /extras/plugins.txt
       # Admin users
       OPS: |
         DeKuen
+        Kagemono
       # RCON for backup script
       ENABLE_RCON: "true"
       RCON_PASSWORD: "change_me"
-      # resource pack for custom sounds
-      RESOURCE_PACK: "https://raw.githubusercontent.com/Wuodan/humorous-mc-plugin/custom_sound/fartpack.zip"
-      RESOURCE_PACK_ID: "001c1a9e-5b85-4e0b-a141-9f44a7d945d7"
-      RESOURCE_PACK_PROMPT: '{"text":"Do you want to install custom fart sounds?"}'
-      RESOURCE_PACK_SHA1: "9e9ee1c29f7f3e905fc239c9f2ae9ab8359d72c8"
     volumes:
       - ./data:/data                               # Bind mount for real files on disk
-      - ./plugins.txt:/extras/plugins.txt:ro       # list of plugins to install
-      - ./scripts:/scripts
+      - ./mods:/mods:ro
     restart: unless-stopped
