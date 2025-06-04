@@ -1,2 +1,2 @@
 https://edge.forgecdn.net/files/6090/792/Dynmap-3.7-beta-8-spigot.jar
-https://github.com/Wuodan/humorous-mc-plugin/releases/download/1.10-alpha-5/sneakfart-1.9.jar
+https://github.com/Wuodan/humorous-mc-plugin/releases/download/1.10-alpha-9/sneakfart-1.9.jar
